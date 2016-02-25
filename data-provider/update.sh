@@ -7,5 +7,6 @@ docker run -it -d --name provider \
 	--link osrm-rio:osrm-rio \
 	--restart=unless-stopped \
 	-e RIOBUS_DB_HOST=mongo \
+	-e RIOBUS_DB_NAME=nodejs \
 	-e RIOBUS_OSRM_HOST=osrm-rio \
 	riobus/provider
