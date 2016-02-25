@@ -1,7 +1,7 @@
 #!/bin/bash
 docker rm -f provider
 docker rmi riobus/provider
-docker build -t riobus/provider .
+docker build -t riobus/provider . && \
 docker run -it -d --name provider \
 	--link mongo:mongo \
 	--link osrm-rio:osrm-rio \
