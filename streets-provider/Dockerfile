@@ -6,4 +6,4 @@ WORKDIR app
 # RUN git fetch --tags
 # RUN git checkout $(git describe --tags `git rev-list --tags --max-count=1`)
 RUN npm install
-ENTRYPOINT npm start
+ENTRYPOINT node index.js
