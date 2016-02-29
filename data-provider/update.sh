@@ -9,4 +9,5 @@ docker run -it -d --name provider \
 	-e RIOBUS_DB_HOST=mongo \
 	-e RIOBUS_DB_NAME=nodejs \
 	-e RIOBUS_OSRM_HOST=osrm-rio \
+	-e RIOBUS_IGNORE_HISTORY_COLLECTION=1 \
 	riobus/provider
