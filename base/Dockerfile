@@ -1,4 +1,0 @@
-FROM node:5.6.0
-EXPOSE 8080
-EXPOSE 80
-ENV npm_config_loglevel warn
