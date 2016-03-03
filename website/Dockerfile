@@ -4,3 +4,4 @@ WORKDIR app
 RUN npm install -g grunt-cli bower
 RUN npm run configure
 ENTRYPOINT grunt serve
+EXPOSE 9000
