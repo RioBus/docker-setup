@@ -2,8 +2,7 @@
 cd "$( dirname "${BASH_SOURCE[0]}" )"
 
 docker rm -f proxy
-docker rmi riobus/proxy
-docker build -t riobus/proxy . && \
+docker pull riobus/proxy && \
 docker run -it -d --name proxy \
 	--link mongo:mongo \
 	-p 8080:8080 \

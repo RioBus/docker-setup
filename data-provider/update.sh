@@ -2,8 +2,7 @@
 cd "$( dirname "${BASH_SOURCE[0]}" )"
 
 docker rm -f provider
-docker rmi riobus/provider
-docker build -t riobus/provider . && \
+docker pull riobus/provider && \
 docker run -it -d --name provider \
 	--link mongo:mongo \
 	--link osrm-rio:osrm-rio \
