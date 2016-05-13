@@ -5,4 +5,5 @@ docker run \
   -d \
   --name osrm-rio \
   -v /data \
+  --log-opt max-size=1m \
   macecchi/osrm-rio
