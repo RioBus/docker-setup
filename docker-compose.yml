@@ -1,0 +1,29 @@
+version: '2'
+services:
+  provider:
+    image: riobus/provider
+    environment:
+      - RIOBUS_DB_HOST=db
+      - RIOBUS_DB_NAME=nodejs
+      - RIOBUS_OSRM_HOST=osrm
+      - RIOBUS_IGNORE_HISTORY_COLLECTION=1
+    restart: unless-stopped
+    depends_on:
+      - db
+      - osrm
+  proxy:
+    image: riobus/proxy
+    ports:
+      - "8080:8080"
+    environment:
+      - RIOBUS_DB_HOST=db
+      - RIOBUS_DB_NAME=nodejs
+    restart: unless-stopped
+    depends_on:
+      - db
+  db:
+    image: mongo
+  osrm:
+    image: macecchi/osrm-rio
+    volumes:
+    - /data
