@@ -19,8 +19,8 @@ configure_script "MongoDB" "./mongo.sh" && \
 configure_script "OSRM" "osrm/update.sh" && \
 configure_script "Data Provider" "data-provider/update.sh" && \
 configure_script "Streets Provider" "streets-provider/update.sh" && \
-configure_script "Proxy" "proxy/update.sh" && \
-configure_script "Website" "website/update.sh"
+configure_script "Proxy" "proxy/update.sh" 
+#configure_script "Website" "website/update.sh"
 
 echo "All done!"
 
